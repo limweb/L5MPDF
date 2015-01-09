@@ -1,4 +1,5 @@
-<?php namespace Servit\Mpdf;
+<?php 
+namespace Servit\Mpdf;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 //use TFox\MpdfPortBundle\Service\MpdfService as mPDF;
@@ -23,9 +24,9 @@ class ServiceProvider extends BaseServiceProvider {
 	 */
 	public function register()
 	{
-		$this->package('Servit/Mpdf');
-
-		if($this->app['config']->get('Mpdf::config.pdf.enabled')){
+		// $this->package('Servit/Mpdf');
+		// dd($this->app['config']->get('Mpdf::config.pdf.enabled'));
+		// if($this->app['config']->get('Mpdf::config.pdf.enabled')){
 			$this->app['mpdf.pdf'] = $this->app->share(function($app)
 			{
 				$base = $app['config']->get('Mpdf::config.pdf.base');
@@ -47,7 +48,10 @@ class ServiceProvider extends BaseServiceProvider {
 			{
 				return new PdfWrapper($app['mpdf.pdf']);
 			});
-		}
+			
+		// } else {
+		// 	dd('else');
+		// }
 	}
 
 	/**
