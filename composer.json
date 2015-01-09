@@ -1,5 +1,5 @@
 {
-    "name": "servit/L5mpdf",
+    "name": "servit/l5mpdf",
     "description": "mPDF wrapper for Laravel 5",
     "keywords": ["laravel","mpdf", "pdf"],
     "authors": [
