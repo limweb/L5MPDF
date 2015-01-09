@@ -1,0 +1,22 @@
+{
+    "name": "servit/L5mpdf",
+    "description": "mPDF wrapper for Laravel 5",
+    "keywords": ["laravel","mpdf", "pdf"],
+    "authors": [
+        {
+            "name": "Lowe Rends",
+            "email": "lowerends@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "5.x",
+        "mpdf/mpdf": "5.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Servit\\Mpdf": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
