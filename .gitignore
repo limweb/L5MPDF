@@ -1,0 +1,10 @@
+*.zip
+*.7z
+composer.phar
+vendor/
+vendor1/
+venbck/
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+composer.lock
