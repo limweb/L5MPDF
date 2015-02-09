@@ -3,22 +3,13 @@
     "description": "mPDF wrapper for Laravel 5",
     "keywords": ["laravel","mpdf", "pdf"],
     "authors": [
-        {
-<<<<<<< HEAD
-            "name": "Thongcahi Lim",
-            "email": "<limweb@hotmail class="com"></limweb@hotmail>"
+      {
+            "name": "thongchai",
+            "email": "limweb@hotmail.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-=======
-            "name": "Lowe Rends",
-            "email": "lowerends@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
->>>>>>> c5f22f2e9becf28a8bf798c8fff49c7f8bd3fc2e
         "illuminate/support": "5.x",
         "mpdf/mpdf": "5.7.*"
     },
