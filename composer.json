@@ -4,12 +4,12 @@
     "keywords": ["laravel","mpdf", "pdf"],
     "authors": [
         {
-            "name": "Lowe Rends",
-            "email": "lowerends@gmail.com"
+            "name": "Thongcahi Lim",
+            "email": "<limweb@hotmail class="com"></limweb@hotmail>"
         }
     ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.4.0",
         "illuminate/support": "5.x",
         "mpdf/mpdf": "5.7.*"
     },
