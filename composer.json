@@ -14,7 +14,7 @@
         "mpdf/mpdf": "dev-master"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Servit\\Mpdf": "src/"
         }
     },
