@@ -1,4 +1,4 @@
-## mPDF Wrapper for Laravel 4
+## mPDF Wrapper for Laravel 5
 
 In development.
 
