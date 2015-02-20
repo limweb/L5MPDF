@@ -137,8 +137,20 @@ class PdfWrapper{
         return $this->mpdf->Output($filename, 'I');
     }
 
-    public function __call($name, $arguments){
-        return call_user_func_array (array( $this->mpdf, $name), $arguments);
+    // public function __call($name, $arguments){
+    //     return call_user_func_array (array( $this->mpdf, $name), $arguments);
+    // }
+
+   public function __call($name, $arguments){
+        // $rs = call_user_func_array (array( $this->mpdf, $name), $arguments);
+            return     call_user_func_array(array($this->mpdf, $name), $this->makeValuesReferenced($arguments));
     }
 
+
+    function makeValuesReferenced($arr){
+        $refs = array();
+        foreach($arr as $key => $value)
+            $refs[$key] = &$arr[$key];
+        return $refs;
+    }
 }
