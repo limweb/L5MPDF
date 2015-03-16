@@ -136,6 +136,11 @@ class PdfWrapper{
 
         return $this->mpdf->Output($filename, 'I');
     }
+    
+   public function toiframe() {
+        return '<iframe type="application/pdf"    width="100%"     height="100%"     src="data:application/pdf;base64,'.base64_encode($this->mpdf->Output('', 'S')).'">    Oops, you have no support for iframes. </iframe>';
+    }
+    
 
     // public function __call($name, $arguments){
     //     return call_user_func_array (array( $this->mpdf, $name), $arguments);
