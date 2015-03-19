@@ -81,6 +81,7 @@ class ServiceProvider extends BaseServiceProvider {
 		// 		return new PdfWrapper($app['mpdf.pdf']);
 		// 	});
 		// // work --------------------------------------------------------------------------end----------
+
 	}
 
 	/**
@@ -93,9 +94,6 @@ class ServiceProvider extends BaseServiceProvider {
 		return array('mpdf.pdf', 'mpdf.wrapper');
 	}
 
-
-
-
 	  /**
      * Bootstrap any application services.
      *
@@ -106,5 +104,4 @@ class ServiceProvider extends BaseServiceProvider {
 	// $this->publishes([__DIR__ . '/../../config/mpdfconfig.php' => config_path('mpdfconfig.php'),], 'config');
 	// consolelog('boot');
     }
-
 }
