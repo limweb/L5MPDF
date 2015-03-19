@@ -81,7 +81,6 @@ class ServiceProvider extends BaseServiceProvider {
 		// 		return new PdfWrapper($app['mpdf.pdf']);
 		// 	});
 		// // work --------------------------------------------------------------------------end----------
-
 	}
 
 	/**
