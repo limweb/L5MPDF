@@ -143,7 +143,7 @@ class PdfWrapper{
     
 
  public function toObject() {
-    return  '<object type="application/pdf" data="data:application/pdf;base64,'.base64_encode(($this->mpdf->Output('', 'S')).'" width="100%" height="100%"></object>';
+    return  '<object type="application/pdf" data="data:application/pdf;base64,'.base64_encode($this->mpdf->Output('', 'S')).'" width="100%" height="100%"></object>';
  }
 
 
