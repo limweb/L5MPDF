@@ -69,3 +69,4 @@ $router->get('/pdf/output', function() {
 });
 ```
 This mPDF Wrapper for Laravel5 is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+1
