@@ -73,3 +73,4 @@ This mPDF Wrapper for Laravel5 is open-sourced software licensed under the [MIT 
 
 
 .............
+/****************************/
