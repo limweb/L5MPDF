@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Servit\Mpdf;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
@@ -29,14 +29,14 @@ class ServiceProvider extends BaseServiceProvider {
 			if($cfg) {
 				$app['mpdf.pdf'] = $app->share(function($app) use($cfg){
 					$mpdf = new \mPDF( $cfg[0],$cfg[1],$cfg[2],$cfg[3],$cfg[4],$cfg[5],$cfg[6],$cfg[7],$cfg[8],$cfg[9],$cfg[10] );
-					$mpdf->SetProtection(array('print'));
-					$mpdf->SetTitle("TOMATO POS - Invoice");
-					$mpdf->SetAuthor("Thongchai Lim");
-					$mpdf->SetWatermarkText("Paid");
-					$mpdf->showWatermarkText = true;
-					$mpdf->watermark_font = 'DejaVuSansCondensed';
-					$mpdf->watermarkTextAlpha = 0.1;
-					$mpdf->SetDisplayMode('fullpage');
+					$mpdf->SetProtection( isset($cfg['SetProtection']) ? $cfg['SetProtection'] : array('print'));
+					$mpdf->SetTitle( isset($cfg['SetTitle']) ? $cfg['SetAuthor'] : "TOMATO POS - Invoice");
+					$mpdf->SetAuthor( isset($cfg['SetAuthor']) ? $cfg['SetAuthor'] : "Thongchai Lim");
+					$mpdf->SetWatermarkText( isset($cfg['SetWatermarkText']) ? $cfg['SetWatermarkText'] : "Paid");
+					$mpdf->showWatermarkText = isset($cfg['showWatermarkText']) ? true : false;
+					$mpdf->watermark_font = isset($cfg['watermark_font']) ? $cfg['watermark_font'] : 'DejaVuSansCondensed';
+					$mpdf->watermarkTextAlpha =  isset($cfg['watermarkTextAlpha']) ? $cfg['watermarkTextAlpha'] : 0.1;
+					$mpdf->SetDisplayMode(  isset($cfg['SetDisplayMode']) ? $cfg['SetDisplayMode'] : 'fullpage');
 					return $mpdf;
 				});
 			} else {
