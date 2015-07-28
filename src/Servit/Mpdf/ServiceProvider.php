@@ -33,7 +33,7 @@ class ServiceProvider extends BaseServiceProvider {
 					$mpdf->SetTitle( isset($cfg['SetTitle']) ? $cfg['SetAuthor'] : "TOMATO POS - Invoice");
 					$mpdf->SetAuthor( isset($cfg['SetAuthor']) ? $cfg['SetAuthor'] : "Thongchai Lim");
 					$mpdf->SetWatermarkText( isset($cfg['SetWatermarkText']) ? $cfg['SetWatermarkText'] : "Paid");
-					$mpdf->showWatermarkText = isset($cfg['showWatermarkText']) ? true : false;
+					$mpdf->showWatermarkText = isset($cfg['showWatermarkText']) ? $cfg['showWatermarkText'] : false;
 					$mpdf->watermark_font = isset($cfg['watermark_font']) ? $cfg['watermark_font'] : 'DejaVuSansCondensed';
 					$mpdf->watermarkTextAlpha =  isset($cfg['watermarkTextAlpha']) ? $cfg['watermarkTextAlpha'] : 0.1;
 					$mpdf->SetDisplayMode(  isset($cfg['SetDisplayMode']) ? $cfg['SetDisplayMode'] : 'fullpage');
