@@ -29,7 +29,7 @@ class ServiceProvider extends BaseServiceProvider {
 			if($cfg) {
 				$app['mpdf.pdf'] = $app->share(function($app) use($cfg){
 					$mpdf = new \mPDF( $cfg[0],$cfg[1],$cfg[2],$cfg[3],$cfg[4],$cfg[5],$cfg[6],$cfg[7],$cfg[8],$cfg[9],$cfg[10] );
-					$mpdf->SetProtection( isset($cfg['SetProtection']) ? $cfg['SetProtection'] : array('print'));
+					#$mpdf->SetProtection( isset($cfg['SetProtection']) ? $cfg['SetProtection'] : array('print'));
 					$mpdf->SetTitle( isset($cfg['SetTitle']) ? $cfg['SetAuthor'] : "TOMATO POS - Invoice");
 					$mpdf->SetAuthor( isset($cfg['SetAuthor']) ? $cfg['SetAuthor'] : "Thongchai Lim");
 					$mpdf->SetWatermarkText( isset($cfg['SetWatermarkText']) ? $cfg['SetWatermarkText'] : "Paid");
