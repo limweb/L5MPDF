@@ -7,7 +7,7 @@ In development.
 ## Instalation
 Add:
 ```
-"servit/l5mpdf": "dev-master", 
+"servit/l5mpdf": "dev-master@dev",
 ```
 To your `composer.json`
 
@@ -18,14 +18,14 @@ composer require servit/l5mpdf
 
 Then add:
 ```php
-'Servit\Mpdf\ServiceProvider', 
+'Servit\Mpdf\ServiceProvider',
 ```
 To the `providers` array on your `config/app.php`
 
 And
 
 ```php
-'PDF'     => 'Servit\Mpdf\Facades\Pdf', 
+'PDF'     => 'Servit\Mpdf\Facades\Pdf',
 ```
 To the `aliases` array on yout `config/app.php` in order to enable the PDF facade
 
@@ -35,13 +35,13 @@ To the `aliases` array on yout `config/app.php` in order to enable the PDF facad
 $router->get('/pdf/view', function() {
        // Config::set('mpdfconfig.pdf.options',['th','A5','','',10,10,10,10,10,5,'L'] );
        // Config::set('mpdfconfig.pdf.options','"th","A0","","",10,10,10,10,6,3');
-       // $mpdfcfg = Config::get('mpdfconfig');    
+       // $mpdfcfg = Config::get('mpdfconfig');
        // dump($mpdfcfg);
        // consolelog('mpdfcfg1',$mpdfcfg);
        $pdf = \App::make('mpdf.wrapper',['th','A0','','',10,10,10,10,10,5,'L']);
        // $pdf = \App::make('mpdf.wrapper');
        $pdf->WriteHTML('<h1>test</h1>');
-       $pdf->AddPage('P'); 
+       $pdf->AddPage('P');
        $pdf->WriteHTML('<h1>test2</h1>');
        $pdf->stream();
 });
